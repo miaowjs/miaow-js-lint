@@ -1,0 +1,33 @@
+{
+  "name": "miaow-js-lint",
+  "description": "Miaow的JS代码检查工具",
+  "version": "0.0.1",
+  "repository": "miaowjs/miaow-js-lint",
+  "author": {
+    "name": "anhulife",
+    "email": "anhulife@gmail.com"
+  },
+  "license": "MIT",
+  "keywords": [
+    "miaow",
+    "eslint",
+    "jshint"
+  ],
+  "dependencies": {
+    "chalk": "~1.0.0",
+    "eslint": "~0.23.0",
+    "jshint": "~2.8.0",
+    "lodash": "~3.8.0",
+    "rcloader": "~0.1.4"
+  },
+  "devDependencies": {
+    "miaow": "^1.1.0",
+    "mocha": "^2.2.4"
+  },
+  "scripts": {
+    "test": "node ./node_modules/mocha/bin/mocha"
+  },
+  "engines": {
+    "node": ">=0.10"
+  }
+}
