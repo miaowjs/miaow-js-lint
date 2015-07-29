@@ -6,6 +6,10 @@ var jshint = require('./lib/jshint');
 var pkg = require('./package.json');
 
 function lint(option, cb) {
+  if (!this.contents.toString().trim()) {
+    return cb();
+  }
+
   var engine = {
       'eslint': eslint,
       'jshint': jshint
