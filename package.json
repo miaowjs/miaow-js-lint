@@ -1,7 +1,7 @@
 {
   "name": "miaow-js-lint",
   "description": "Miaow的JS代码检查工具",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "repository": "miaowjs/miaow-js-lint",
   "author": {
     "name": "anhulife",
@@ -18,11 +18,11 @@
     "eslint": "~0.23.0",
     "jshint": "~2.8.0",
     "lodash": "~3.8.0",
-    "miaow-util": "~0.4.0",
+    "miaow-util": "~0.6.1",
     "rcloader": "~0.1.4"
   },
   "devDependencies": {
-    "miaow": "^2.4.1",
+    "miaow": "^4.0.0",
     "mocha": "^2.2.4"
   },
   "scripts": {
