@@ -1,21 +1,23 @@
-var mutil = require('miaow-util');
-
 var eslint = require('./lib/eslint');
 var jshint = require('./lib/jshint');
 
 var pkg = require('./package.json');
 
-function lint(option, cb) {
-  if (!this.contents.toString().trim()) {
-    return cb();
+module.exports = function(options, callback) {
+  var context = this;
+
+  if (!context.contents.toString().trim()) {
+    return callback();
   }
 
   var engine = {
-      'eslint': eslint,
-      'jshint': jshint
-    }[(option.engine || 'eslint').toLowerCase()] || eslint;
+      eslint: eslint,
+      jshint: jshint
+    }[(options.engine || 'eslint').toLowerCase()] || eslint;
 
-  engine.call(this, option, cb);
-}
+  engine.call(context, options, callback);
+};
 
-module.exports = mutil.plugin(pkg.name, pkg.version, lint);
+module.exports.toString = function() {
+  return [pkg.name, pkg.version].join('@');
+};
